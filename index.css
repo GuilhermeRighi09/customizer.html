@@ -10,8 +10,8 @@
 .navbar {
     display: flex;
     align-items: center;
-    padding: 20px 0; /* Espaçamento original do seu navbar */
-    background-color: transparent; /* Transparente para usar o gradiente do .header */
+    padding: 20px 0;
+    background-color: transparent;
 }
 
 .navbar .logo img {
@@ -35,7 +35,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(109, 109, 109); /* Cor original dos links */
+    color: rgb(109, 109, 109);
     font-weight: 500;
     transition: color 0.3s;
 }
@@ -49,7 +49,7 @@ nav ul li a:hover {
     width: 28px;
     display: none;
     cursor: pointer;
-    filter: none; /* Remove o filtro invert, já que o fundo não é mais escuro */
+    filter: none;
 }
 
 /* ----- Container e layout ----- */
@@ -108,60 +108,71 @@ nav ul li a:hover {
 
 /* ----- Header (volta ao estilo original com gradiente) ----- */
 .header {
-    background: radial-gradient(#ffffff, #fdb9b9); /* Gradiente original */
+    background: radial-gradient(#ffffff, #fad1d1);
 }
 
 .header .row {
     margin-top: 70px;
 }
 
-/* ----- Seção de login/registro (ajustada para aparecer ao lado da imagem) ----- */
-.conta-page {
-    padding: 50px 0;
-    background: radial-gradient(#ffffff, #fdb9b9);
-    min-height: 100vh; /* Garante que ocupe a altura da tela */
-    display: none; /* Inicialmente oculta */
-    align-items: center; /* Centraliza verticalmente o conteúdo */
+/* --- Seção "Quem somos nós" --- */
+.quem-somos-nos {
+    padding: 80px 0; /* Mais padding para separar bem */
+    background: radial-gradient(#ffffff, #f0f0f0); /* Um gradiente suave ou cor sólida */
+    text-align: center;
+    color: #333;
 }
 
-/* Mostra a conta-page quando tiver a classe 'active' */
+.quem-somos-nos h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.quem-somos-nos p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* ----- Seção de login/registro ----- */
+.conta-page {
+    padding: 50px 0;
+    background: radial-gradient(#ffffff, #fad1d1);
+    min-height: 100vh;
+    display: none;
+    align-items: center;
+}
+
 .conta-page.active {
-    display: flex; /* Exibe como flexbox */
+    display: flex;
 }
 
 .conta-page .row {
-    width: 100%; /* Ocupa a largura total do container */
-    justify-content: center; /* Centraliza as colunas */
+    width: 100%;
+    justify-content: center;
 }
 
 .conta-page .col-2 {
     flex-basis: 50%;
     min-width: 300px;
-    display: flex; /* Para centralizar o form-container */
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Apenas a imagem na seção de CONTEÚDO PRINCIPAL (header) terá este estilo */
 .header .col-2 img {
     max-width: 100%;
     padding: 50px 0;
 }
 
-/* Estilo para a imagem que fica ao lado do formulário de login */
-/* Como você não tem uma imagem aqui agora, este estilo não será aplicado a nada.
-   Se você adicionar uma imagem depois, aplique a ela. */
-.conta-page .col-2 img { /* REMOVIDA, então este estilo não é mais aplicado */
-    max-width: 100%;
-    padding: 50px 0;
-}
-
-
 .form-container {
     width: 350px;
     height: 450px;
     background: #fff;
-    margin: auto; /* Centraliza horizontalmente */
+    margin: auto;
     position: relative;
     text-align: center;
     padding-top: 20px;
@@ -201,7 +212,7 @@ nav ul li a:hover {
     transition: transform 1s;
     position: absolute;
     bottom: 0;
-    left: 25px; /* Ajustado para alinhar com o "Login" */
+    left: 25px;
 }
 
 #LoginForm, #RegForm {
@@ -258,6 +269,60 @@ nav ul li a:hover {
     color: #ff9898;
 }
 
+/* --- Seção de Localização (Google Maps) --- */
+.localizacao-section {
+    padding: 80px 0;
+    background: radial-gradient(#ffffff, #fad1d1); /* Usando a paleta do site */
+    text-align: center;
+    color: #333;
+}
+
+.localizacao-section h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.map-container {
+    width: 80%;
+    max-width: 900px;
+    margin: 40px auto 20px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+#map {
+    height: 400px; /* Altura do mapa */
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+}
+
+.city-input {
+    width: calc(100% - 20px); /* Largura do input */
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que padding não adicione largura */
+}
+
+.city-input:focus {
+    outline: none;
+    border-color: #ff9898;
+    box-shadow: 0 0 5px rgba(255, 152, 152, 0.5);
+}
+
+.map-info {
+    font-size: 14px;
+    color: #666;
+    margin-top: 20px;
+}
+
 
 /* ----- Media Queries para Responsividade ----- */
 @media only screen and (max-width: 980px) {
@@ -280,7 +345,7 @@ nav ul li a:hover {
     nav ul {
         flex-direction: column;
         width: 100%;
-        background: radial-gradient(#ffffff, #fdb9b9); /* Fundo gradiente para o menu móvel */
+        background: radial-gradient(#ffffff, #fdb9b9);
         position: absolute;
         top: 70px;
         left: 0;
@@ -288,14 +353,14 @@ nav ul li a:hover {
         overflow: hidden;
         transition: max-height 0.5s;
         z-index: 1000;
-        border-top: none; /* Remove a borda superior que era do fundo escuro */
+        border-top: none;
     }
 
     nav ul li {
         width: 100%;
         height: 50px;
         border-left: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Borda mais escura para fundo claro */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         justify-content: center;
     }
 
@@ -304,7 +369,7 @@ nav ul li a:hover {
     }
 
     nav ul li a {
-        color: rgb(109, 109, 109); /* Cor dos links no menu móvel */
+        color: rgb(109, 109, 109);
     }
 
     .menu-icon {
@@ -312,7 +377,7 @@ nav ul li a:hover {
         position: absolute;
         right: 25px;
         top: 25px;
-        filter: none; /* Remove o filtro de inversão para o ícone */
+        filter: none;
     }
 
     .col-2 {
@@ -329,8 +394,35 @@ nav ul li a:hover {
         margin-top: 20px;
     }
 
-    /* Oculta a imagem no modo responsivo para o formulário de login */
-    .conta-page .row .col-2:first-child + .col-2 { /* Seleciona a segunda col-2 */
+    .conta-page .row .col-2:first-child + .col-2 {
         display: none;
+    }
+
+    /* Responsividade para "Quem somos nós" */
+    .quem-somos-nos h2 {
+        font-size: 30px;
+    }
+
+    .quem-somos-nos p {
+        font-size: 16px;
+        padding: 0 15px; /* Adiciona padding horizontal em telas menores */
+    }
+
+    /* Responsividade para Localização */
+    .localizacao-section h2 {
+        font-size: 30px;
+    }
+
+    .map-container {
+        width: 95%; /* Ocupa mais largura em telas pequenas */
+        padding: 15px;
+    }
+
+    #map {
+        height: 300px; /* Reduz a altura do mapa em telas menores */
+    }
+
+    .city-input {
+        width: 100%;
     }
 }

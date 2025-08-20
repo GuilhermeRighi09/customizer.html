@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizer</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="header" id="home">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <img src="customizer_logo.png" width="125px">
+            </div>
+
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#localizacao">Localização</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#conta">Conta</a></li>
+                </ul>
+            </nav>
+            <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+
+        <div class="row">
+            <div class="col-2">
+                <h1>Customizer<br>Um novo jeito de personalizar</h1>
+                <p>Moda sob medida ao seu alcance. Conectamos clientes a costureiras talentosas.<br>
+                    Unindo criatividade, qualidade e valorização do trabalho artesanal em uma experiência ágil e confiável.</p>
+                <a href="#conta" class="btn">Explore Já</a>
+            </div>
+            <div class="col-2">
+                <img src="img.png" width="500px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="quem-somos-nos" id="sobre">
+    <div class="container">
+        <h2>Quem somos nós</h2>
+        <p>Somos uma plataforma inovadora que conecta clientes a costureiras talentosas, facilitando a criação e entrega de roupas personalizadas de maneira prática e ágil. Nosso foco é proporcionar uma experiência simples e conveniente, onde estilo, qualidade e personalização se encontram para transformar a moda no seu ritmo.</p>
+    </div>
+</section>
+
+<div class="conta-page" id="conta">
+    <div class="container">
+        <div class="row">
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Login</span>
+                        <span onclick="registro()">Registro</span>
+                        <hr id="Indicador">
+                    </div>
+
+                    <form id="LoginForm">
+                        <input type="text" placeholder="Nome">
+                        <input type="password" placeholder="Senha">
+                        <button type="submit" class="btn">Login</button>
+                        <a href="">Esqueci minha senha</a>
+                    </form>
+
+                    <form id="RegForm">
+                        <input type="text" placeholder="Nome">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Senha">
+                        <button type="submit" class="btn">Registro</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="localizacao-section" id="localizacao">
+    <div class="container">
+        <h2>Encontre Costureiras na sua Região!</h2>
+        <div class="map-container">
+            <input type="text" id="cityAutocomplete" placeholder="Digite o nome da sua cidade para buscar costureiras" class="city-input">
+            <div id="map"></div>
+        </div>
+        <p class="map-info">Ao selecionar sua cidade, você será redirecionado para a área de login/registro para ver as costureiras disponíveis. 🧵</p>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
