@@ -72,6 +72,10 @@ document.querySelectorAll('nav ul li a').forEach(link => {
                 targetSection.scrollIntoView({ behavior: 'smooth' });
             }
         }
+        // Oculta o menu mobile após clicar em um item
+        if (MenuItems.style.maxHeight !== "0px") {
+            menutoggle();
+        }
     });
 });
 
@@ -108,7 +112,7 @@ function initMap() {
 
         console.log('Cidade selecionada:', place.name);
         // Ao selecionar a cidade, redireciona para a aba de login/registro
-        showContaAndScroll();
+        // showContaAndScroll(); // Comentei para não forçar o login após selecionar cidade no mapa.
     });
 }
 
