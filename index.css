@@ -1,16 +1,15 @@
 /* ----- Reset básico ----- */
-* {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 /* ----- Navbar ----- */
 .navbar {
     display: flex;
     align-items: center;
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: transparent;
 }
 
@@ -20,7 +19,7 @@
 
 nav {
     flex: 1;
-    text-align: right;
+    text-align: left;
 }
 
 nav ul {
@@ -76,11 +75,20 @@ nav ul li a:hover {
     padding: 20px 0;
 }
 
-.col-2 h1 {
-    font-size: 50px;
+.subtitulo {
+    font-size: 20px;
     line-height: 60px;
     margin: 25px 0;
-    color: #333;
+    color: #555;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.titulo {
+    font-size: 60px;
+    line-height: 20px;
+    margin: 25px 0;
+    color: #555;
+    font-family: "Italiana";
 }
 
 .col-2 p {
@@ -127,6 +135,7 @@ nav ul li a:hover {
     font-size: 38px;
     margin-bottom: 25px;
     color: #333;
+    font-family: "Italiana";
 }
 
 .quem-somos-nos p {
@@ -135,134 +144,6 @@ nav ul li a:hover {
     max-width: 800px;
     margin: 0 auto;
     color: #555;
-}
-
-/* ----- Seção de login/registro ----- */
-.conta-page {
-    padding: 50px 0;
-    background-color: #d7d0c9;
-    min-height: 100vh;
-    display: none;
-    align-items: center;
-    justify-content: center;
-}
-
-.conta-page.active {
-    display: flex;
-}
-
-.conta-page .row {
-    width: 100%;
-    justify-content: center;
-}
-
-.conta-page .col-2:has(.form-container) {
-    flex-basis: auto;
-    min-width: unset;
-    display: flex;
-    justify-content: center;
-}
-
-
-.form-container {
-    width: 350px;
-    height: 450px;
-    background: #fff;
-    margin: auto;
-    position: relative;
-    text-align: center;
-    padding-top: 20px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.form-container .form-btn {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.form-container .form-btn span {
-    flex-basis: 50%;
-    padding: 0 10px;
-    font-weight: bold;
-    color: #555;
-    cursor: pointer;
-    position: relative;
-    padding-bottom: 8px;
-}
-
-.form-container .form-btn span:hover {
-    color: #ff9898;
-}
-
-#Indicador {
-    width: 100px;
-    border: none;
-    background: #ff523b;
-    height: 3px;
-    margin-top: 8px;
-    transform: translateX(0px);
-    transition: transform 1s;
-    position: absolute;
-    bottom: 0;
-    left: 25px;
-}
-
-#LoginForm, #RegForm {
-    width: 100%;
-    max-height: 100%;
-    padding: 0 30px;
-    position: absolute;
-    top: 100px;
-    left: 0;
-    transform: translateX(0px);
-    transition: transform 1s;
-}
-
-#RegForm {
-    transform: translateX(350px);
-}
-
-.form-container input[type="text"],
-.form-container input[type="password"],
-.form-container input[type="email"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.form-container button[type="submit"] {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    background: #ff9898;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background 0.3s;
-}
-
-.form-container button[type="submit"]:hover {
-    background: #e07b7b;
-}
-
-.form-container a {
-    display: block;
-    margin-top: 10px;
-    color: #666;
-    text-decoration: none;
-}
-
-.form-container a:hover {
-    color: #ff9898;
 }
 
 /* --- Seção de Localização (Google Maps) --- */
@@ -277,6 +158,7 @@ nav ul li a:hover {
     font-size: 38px;
     margin-bottom: 25px;
     color: #333;
+    font-family: "Italiana";
 }
 
 .map-container {
@@ -322,7 +204,7 @@ nav ul li a:hover {
 /* --- Nova Seção de Perfis --- */
 .secao-costureiras {
     padding: 80px 0;
-    background-color:#fff;
+    background-color: #fff;
     text-align: center;
     color: #333;
 }
@@ -331,6 +213,7 @@ nav ul li a:hover {
     font-size: 38px;
     margin-bottom: 25px;
     color: #333;
+    font-family: "Italiana";
 }
 
 .secao-costureiras p {
@@ -370,18 +253,6 @@ nav ul li a:hover {
 .profile-header {
     margin-bottom: 20px;
 }
-
-/* Removido o estilo do profile-logo pois a imagem foi retirada do HTML */
-/*
-.profile-logo {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-bottom: 10px;
-    border: 3px solid #ff9898;
-}
-*/
 
 .perfil-card h3 {
     font-size: 24px;
@@ -439,72 +310,71 @@ nav ul li a:hover {
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  background-color: #d7d0c9;
-  color:  rgb(109, 109, 109);
-  padding: 60px 40px;
-  gap: 40px;
-  font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    background-color: #d7d0c9;
+    color: rgb(109, 109, 109);
+    padding: 60px 40px;
+    gap: 40px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .footer-col h4 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  position: relative;
-  color:  rgb(109, 109, 109);
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    color: rgb(109, 109, 109);
 }
 
 .footer-col p {
-  font-size: 14px;
-  line-height: 1.6;
-  color:  rgb(109, 109, 109);
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgb(109, 109, 109);
 }
 
 .footer-col ul {
-  list-style: none;
-  padding: 0;
+    list-style: none;
+    padding: 0;
 }
 
 .footer-col ul li {
-  margin-bottom: 10px;
+    margin-bottom: 10px;
 }
 
 .footer-col ul li a {
-  color:  rgb(109, 109, 109);
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s;
+    color: rgb(109, 109, 109);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
 }
 
 .footer-col ul li a:hover {
-  color: #ff9898;
+    color: #ff9898;
 }
 
 .social-icons a {
-  display: inline-block;
-  margin-right: 10px;
-  color:  rgb(109, 109, 109);
-  font-size: 18px;
-  transition: color 0.3s;
+    display: inline-block;
+    margin-right: 10px;
+    color: rgb(109, 109, 109);
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #ff9898;
+    color: #ff9898;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+    .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-  .social-icons {
-    justify-content: center;
-  }
+    .social-icons {
+        justify-content: center;
+    }
 }
-
 
 /* ----- Media Queries para Responsividade ----- */
 @media only screen and (max-width: 980px) {
@@ -527,7 +397,7 @@ nav ul li a:hover {
     nav ul {
         flex-direction: column;
         width: 100%;
-        background: radial-gradient(#ffffff, #fdb9b9);
+        background: radial-gradient(#ffffff, #d7d0c9);
         position: absolute;
         top: 70px;
         left: 0;
@@ -570,6 +440,7 @@ nav ul li a:hover {
     .col-2 h1 {
         font-size: 30px;
         line-height: 40px;
+        font-family: "Italiana";
     }
 
     .header .row {
@@ -582,6 +453,7 @@ nav ul li a:hover {
 
     .quem-somos-nos h2 {
         font-size: 30px;
+        font-family: "Italiana";
     }
 
     .quem-somos-nos p {
@@ -591,6 +463,7 @@ nav ul li a:hover {
 
     .localizacao-section h2 {
         font-size: 30px;
+        font-family: "Italiana";
     }
 
     .map-container {
@@ -605,9 +478,10 @@ nav ul li a:hover {
     .city-input {
         width: 100%;
     }
-    
+
     .secao-costureiras h2 {
         font-size: 30px;
+        font-family: "Italiana";
     }
 
     .perfil-card {

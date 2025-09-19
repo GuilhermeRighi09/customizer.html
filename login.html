@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="conta-page" id="conta">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="registro()">Registro</span>
+                            <hr id="Indicador">
+                        </div>
+                        <form id="LoginForm" onsubmit="event.preventDefault(); logarSistema();">
+                            <input type="text" id="email" placeholder="Email">
+                            <input type="password" id="password" placeholder="Senha">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="#">Esqueci minha senha</a>
+                        </form>
+                        <form id="RegForm" onsubmit="event.preventDefault();">
+                            <input type="text" placeholder="Nome">
+                            <input type="email" placeholder="Email">
+                            <input type="password" placeholder="Senha">
+                            <button type="submit" class="btn">Registro</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>
