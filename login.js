@@ -1,22 +1,14 @@
-/* ----- LOGIN / REGISTRO ----- */
-const LoginForm = document.getElementById("LoginForm");
-const RegForm = document.getElementById("RegForm");
-const Indicador = document.getElementById("Indicador");
+var Indicador = document.getElementById("Indicador");
+var formSlider = document.querySelector(".form-slider");
 
-function login() {
-    if (LoginForm && RegForm && Indicador) {
-        LoginForm.style.transform = "translateX(0px)";
-        RegForm.style.transform = "translateX(350px)";
-        Indicador.style.transform = "translateX(0px)";
-    }
+function register() {
+    formSlider.style.transform = "translateX(-100%)";
+    Indicador.style.transform = "translateX(100%)";
 }
 
-function registro() {
-    if (LoginForm && RegForm && Indicador) {
-        LoginForm.style.transform = "translateX(-350px)";
-        RegForm.style.transform = "translateX(0px)";
-        Indicador.style.transform = "translateX(100px)";
-    }
+function login() {
+    formSlider.style.transform = "translateX(0%)";
+    Indicador.style.transform = "translateX(0%)";
 }
  
 function logarSistema() {
