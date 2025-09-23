@@ -1,6 +1,6 @@
 /* Estilo para o corpo da página */
 body {
-    background: radial-gradient(#fff, #ffd6d6);
+    background: radial-gradient(#fff, #d7d0c9);
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
@@ -49,13 +49,13 @@ body {
 }
 
 .form-container .form-btn span:hover {
-    color: #ff9898;
+    color:#d7d0c9;
 }
 
 #Indicador {
     width: 50%;
     border: none;
-    background: #ff523b;
+    background: #4d4d4d;
     height: 3px;
     margin-top: 8px;
     transform: translateX(0);
@@ -101,7 +101,7 @@ button {
     padding: 10px;
     /* Aumentar a margem vertical para mais altura */
     margin: 15px 0; 
-    background: #ff9898;
+    background: #ddd;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -111,7 +111,7 @@ button {
 }
 
 button:hover {
-    background: #e07b7b;
+    background: #424242;
 }
 
 a {
