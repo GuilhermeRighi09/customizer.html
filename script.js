@@ -40,45 +40,5 @@ document.querySelectorAll('nav ul li a').forEach(link => {
     });
 });
 
-/* ----- Google Maps Integration ----- */
-let map;
-let autocomplete;
 
-function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: { lat: -23.5505, lng: -46.6333 },
-        zoom: 8
-    });
-
-    const input = document.getElementById('cityAutocomplete');
-    autocomplete = new google.maps.places.Autocomplete(input, {
-        types: ['(cities)'],
-        componentRestrictions: { country: ['br'] }
-    });
-
-    autocomplete.addListener('place_changed', () => {
-        const place = autocomplete.getPlace();
-        if (!place.geometry) {
-            alert("Não foi possível encontrar detalhes para: '" + place.name + "'");
-            return;
-        }
-        
-        if (place.geometry.viewport) {
-            map.fitBounds(place.geometry.viewport);
-        } else {
-            map.setCenter(place.geometry.location);
-            map.setZoom(12);
-        }
-        
-        console.log('Cidade selecionada:', place.name);
-        window.location.href = 'login.html';
-    });
-}
-
-// Carrega a API do Google Maps com a chave e a biblioteca 'places'
-const googleMapsScript = document.createElement('script');
-googleMapsScript.src = "https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API&libraries=places&callback=initMap";
-googleMapsScript.async = true;
-googleMapsScript.defer = true;
-document.head.appendChild(googleMapsScript);
 

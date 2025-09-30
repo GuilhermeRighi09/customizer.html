@@ -51,7 +51,7 @@ nav ul li a:hover {
     filter: none;
 }
 
-/* ----- Container e layout ----- */
+/* Página Inicial*/
 .container {
     max-width: 1300px;
     margin: auto;
@@ -71,11 +71,9 @@ nav ul li a:hover {
 }
 
 .col-2 img {
-    max-width: 100%;
-    padding: 20px 0;
-    /* Adicionado para empurrar a imagem para a direita */
-    margin-left: auto;
-    display: block;
+    margin-left: 1290px;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 .subtitulo {
@@ -117,7 +115,6 @@ nav ul li a:hover {
     background: #3b3b3b;
 }
 
-/* ----- Header (volta ao estilo original com gradiente) ----- */
 .header {
     background-color: #d7d0c9;
 }
@@ -149,59 +146,59 @@ nav ul li a:hover {
     color: #555;
 }
 
-/* --- Seção de Localização (Google Maps) --- */
-.localizacao-section {
-    padding: 80px 0;
+/*Mapa*/
+.localizacao-secao {
     background-color: #d7d0c9;
     text-align: center;
     color: #333;
 }
 
-.localizacao-section h2 {
+/*Mapa*/
+.localizacao-secao {
+    background-color: #d7d0c9;
+    color: #333;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px 0; 
+    min-height: 400px; 
+}
+
+.localizacao-secao h2 {
     font-size: 38px;
-    margin-bottom: 25px;
+    margin-top: 50px;
+    margin-bottom: 20px;
     color: #333;
     font-family: "Italiana";
-}
-
-.map-container {
-    width: 80%;
-    max-width: 900px;
-    margin: 40px auto 20px auto;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-}
-
-#map {
-    height: 400px;
-    width: 100%;
-    border-radius: 8px;
-    margin-top: 15px;
-    border: 1px solid #ddd;
-}
-
-.city-input {
-    width: calc(100% - 20px);
-    padding: 12px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    box-sizing: border-box;
-}
-
-.city-input:focus {
-    outline: none;
-    border-color: #ff9898;
-    box-shadow: 0 0 5px rgba(255, 152, 152, 0.5);
+    text-align: center;
 }
 
 .map-info {
-    font-size: 14px;
-    color: #666;
-    margin-top: 20px;
+    max-width: 800px; 
+    margin: 0; 
+    margin-bottom: 30px; 
+    text-align: center; 
+}
+
+.maps {
+    margin: 0;
+}
+
+.maps img {
+    width: 800px; 
+    margin: 0;
+    padding: 20px 0;
+    display: block; 
+}
+ a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #000000;
 }
 
 /* --- Nova Seção de Perfis --- */
@@ -230,7 +227,7 @@ nav ul li a:hover {
 .profiles-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 50px;
+    gap: 60px;
     justify-items: center;
 }
 
@@ -292,21 +289,23 @@ nav ul li a:hover {
 
 .btn-perfil {
     display: inline-block;
-    background: #616161;
+    background: #666;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px;
     margin-top: 20px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 500;
-    transition: background 0.5s;
+    transition: background 0.3s;
     border: none;
     cursor: pointer;
     width: 100%;
+    text-align: center; 
+    box-sizing: border-box; 
 }
 
 .btn-perfil:hover {
-    background: #e07b7b;
+    background: #333;
+    color: white;
 }
 
 /* Font Awesome para ícones sociais */

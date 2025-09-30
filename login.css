@@ -52,18 +52,6 @@ body {
     color:#d7d0c9;
 }
 
-#Indicador {
-    width: 50%;
-    border: none;
-    background: #4d4d4d;
-    height: 3px;
-    margin-top: 8px;
-    transform: translateX(0);
-    transition: transform 1s;
-    position: absolute;
-    bottom: 0;
-}
-
 /* O contêiner que desliza */
 .form-slider {
     display: flex;
