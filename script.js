@@ -24,10 +24,10 @@ document.querySelectorAll('nav ul li a').forEach(link => {
             const senha = window.localStorage.getItem('senha');
 
             // Verifica se o usuário está logado
-            if (email === null || email === undefined || email !== 'customizer@gmail.com' || senha !== '1234') {
+            if (email === null || email === undefined || email !== 'comercecustom@gmail.com' || senha !== '1234') {
                 e.preventDefault(); // Previne o scroll para a seção
                 alert('Você precisa estar logado para navegar nesta página!');
-                window.location.href = 'login.html';
+                window.location.href = '../login/login.html';
             } else {
                 // Se o usuário está logado, permite o scroll suave
                 const targetSection = document.querySelector(targetId);
