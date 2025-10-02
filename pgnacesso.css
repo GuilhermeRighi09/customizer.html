@@ -71,29 +71,38 @@ nav ul li a:hover {
 .col-2 {
     flex-basis: 50%;
     min-width: 300px;
+    
+}
+
+.col-2 img {
+    margin-left: 1290px;
+    margin-bottom: auto;
+    margin-top: auto;
 }
 
 .subtitulo {
     font-size: 20px;
     line-height: 60px;
-    margin: 40px 0;
+    margin: 25px 0;
     color: #555;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 30px;
     margin-left: 90px;
 }
 
 .titulo {
     font-size: 60px;
     line-height: 20px;
-    margin: 70px 0;
+    margin: 25px 0;
     color: #555;
     font-family: "Italiana";
+    margin: 50px;
     margin-left: 90px;
 }
 
 .col-2 p {
     color: #555;
-    margin: 40px 0;
+    margin: 0;
     margin-left: 90px;
 }
 
@@ -110,13 +119,11 @@ nav ul li a:hover {
     transition: background 0.5s;
     border: none;
     cursor: pointer;
-    margin-left: 90px;
-
+    
 }
 
 .btn:hover {
-    background: #000000;
-    color: #ffffff;
+    background: #3b3b3b;
 }
 
 .header {
@@ -134,7 +141,7 @@ nav ul li a:hover {
 
 .ilustracao img {
     margin-left: 900px;  
-    margin-top: -550px; 
+    margin-top: -350px; 
     margin-bottom: 0; 
 }
 
@@ -164,6 +171,13 @@ nav ul li a:hover {
 /*Mapa*/
 .localizacao-secao {
     background-color: #d7d0c9;
+    text-align: center;
+    color: #333;
+}
+
+/*Mapa*/
+.localizacao-secao {
+    background-color: #d7d0c9;
     color: #333;
     display: flex; 
     flex-direction: column; 
@@ -171,7 +185,6 @@ nav ul li a:hover {
     justify-content: center; 
     padding: 20px 0; 
     min-height: 400px; 
-    text-align: center;
 }
 
 .localizacao-secao h2 {
@@ -320,13 +333,13 @@ a:hover {
 /* Font Awesome para ícones sociais */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
+
 .footer-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     background-color: #d7d0c9;
     color: rgb(109, 109, 109);
     font-family: 'Poppins', sans-serif;
-
     padding: 10px 10px;
     gap: 30px;
 }
@@ -370,10 +383,6 @@ a:hover {
     color: rgb(109, 109, 109);
     font-size: 18px;
     transition: color 0.3s;
-}
-
-.social-icons a:hover {
-    color: #ff9898;
 }
 
 /* Responsivo */

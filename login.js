@@ -30,11 +30,11 @@ function logarSistema() {
     if (email === 'comercecustom@gmail.com' && senha === '1234') {
         window.localStorage.setItem('email', email);
         window.localStorage.setItem('senha', senha);
-        window.location.href = '../adm/adm.html';
+        window.location.href = '../adm-pag/adm.html';
     } 
-    // Redireciona para a página principal (pgn1.html) para qualquer outro login
+    // Redireciona para a página de acesso para qualquer outro login
     else if (email && senha) {
-        window.location.href = '../principal/pgn1.html';
+        window.location.href = '../pgn-acesso/pgnacesso.html';
     }
     // Caso contrário, mostra um alerta de erro
     else {
