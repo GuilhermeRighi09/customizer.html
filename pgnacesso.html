@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customizer</title>
 
-    <link rel="stylesheet" href="../pgn-acesso/pgnacesso.css">
+    <link rel="stylesheet" href="../pgn-logada/pgnacesso.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
@@ -62,110 +62,135 @@
 </section>
 
     <section class="secao-costureiras" id="servicos">
-        <div class="container">
-            <h2>Costureiras em Piracicaba</h2>
-            <p>Conheça as talentosas costureiras da nossa rede em Piracicaba. Clique para saber mais e entrar em contato!</p>
-            <div class="profiles-grid">
-                <div class="perfil-card">
-                    <div class="profile-header">
-                        <h3>Jussilene Rocha</h3>
-                    </div>
-                    <div class="profile-details">
-                        <p><strong>Serviços:</strong> Consertos em geral, ajustes, reformas e costura sob medida.</p>
-                        <p><strong>Contato:</strong> <a href="tel:+5519992276472" class="contact-link">+55 19 99227-6472</a></p>
-                        <p><strong>Horário:</strong> Seg-Qui: 08:00–19:00, Sex: 08:00–18:00, Sáb: 09:00–13:00</p>
-                        <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
-                        <a href="https://wa.me/5519992276472" target="_blank" class="btn-perfil">Fale conosco (WhatsApp)</a>
-                    </div>
+        <div class="container-principal">
+            
+            <aside class="sidebar-filtros">
+                <h2>🔎 Filtros</h2>
+
+                <div class="filtro-grupo">
+                    <h3>Tipo de Serviço</h3>
+                    <label><input type="checkbox" name="servico" value="sob-medida"> Costura Sob Medida</label>
+                    <label><input type="checkbox" name="servico" value="criativa"> Costura Criativa</label>
+                    <label><input type="checkbox" name="servico" value="decoracao"> Decoração/Casa</label>
+                    <label><input type="checkbox" name="servico" value="reparos"> Consertos e Reparos</label>
                 </div>
-                <div class="perfil-card">
-                    <div class="profile-header">
-                        <h3>Nilze Disk Costura</h3>
-                    </div>
-                    <div class="profile-details">
-                        <p><strong>Serviços:</strong> Reparos e ajustes de roupas em geral.</p>
-                        <p><strong>Contato:</strong> <a href="tel:+5519987309789" class="contact-link">+55 19 98730-9789</a></p>
-                        <p><strong>Horário:</strong> (Verificar no Maps)</p>
-                        <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
-                        <a href="https://wa.me/5519987309789" target="_blank" class="btn-perfil">Fale conosco (WhatsApp)</a>
-                    </div>
+
+                <div class="filtro-grupo">
+                    <h3>Horários de Atendimento</h3>
+                    <label><input type="checkbox" name="horario" value="sabado"> Aberto aos Sábados</label>
+                    <label><input type="checkbox" name="horario" value="domingo"> Aberto aos Domingos</label>
+                    <label><input type="checkbox" name="horario" value="noturno"> Fecha após 19:00h</label>
+                    <label><input type="checkbox" name="horario" value="cedo"> Abre às 08:00h</label>
                 </div>
-                <div class="perfil-card">
-                    <div class="profile-header">
-                        <h3>Ateliê Dacabris Costurices</h3>
-                    </div>
-                    <div class="profile-details">
-                        <p><strong>Serviços:</strong> Costura criativa, reformas e ajustes.</p>
-                        <p><strong>Contato:</strong> <a href="tel:+5519981551266" class="contact-link">+55 19 98155-1266</a></p>
-                        <p><strong>Horário:</strong> Seg-Qui: 09:00–18:00, Sex: 09:00–17:00</p>
-                        <p><strong>Social:</strong> <a href="https://www.instagram.com/atelie.dacabris" target="_blank" class="contact-link">Instagram</a></p>
-                        <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
-                        <a href="https://www.instagram.com/atelie.dacabris" target="_blank" class="btn-perfil">Fale conosco (Instagram)</a>
-                    </div>
+
+                <div class="filtro-grupo">
+                    <h3>Preço (Indicação)</h3>
+                    <p class="nota-filtro">Consulte sempre o valor final!</p>
+                    <label><input type="checkbox" name="preco" value="preco-baixo"> Indica preços iniciais baixos</label>
                 </div>
-                <div class="perfil-card">
-                    <div class="profile-header">
-                        <h3>Odete Costureira Mesadecor</h3>
+                
+                <button onclick="aplicarFiltros()" class="btn-aplicar">Aplicar Filtros</button>
+                <button onclick="limparFiltros()" class="btn-limpar">Limpar Filtros</button>
+            </aside>
+
+            <div class="conteudo-principal">
+                <h2>Costureiras em Piracicaba</h2>
+                <p>Conheça as talentosas costureiras da nossa rede em Piracicaba. Clique para saber mais e entrar em contato!</p>
+
+                <div class="profiles-grid" id="lista-costureiras">
+                    
+                    <div class="perfil-card" data-servicos="sob-medida reparos" data-horario="sabado noturno cedo">
+                        <div class="profile-header"><h3>Jussilene Rocha</h3></div>
+                        <div class="profile-details">
+                            <p><strong>Serviços:</strong> Consertos em geral, ajustes, reformas e costura sob medida.</p>
+                            <p><strong>Contato:</strong> <a href="tel:+5519992276472" class="contact-link">+55 19 99227-6472</a></p>
+                            <p><strong>Horário:</strong> Seg-Qui: 08:00–19:00, Sex: 08:00–18:00, Sáb: 09:00–13:00</p>
+                            <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
+                            <a href="https://wa.me/5519992276472" target="_blank" class="btn-perfil">Fale conosco (WhatsApp)</a>
+                        </div>
                     </div>
-                    <div class="profile-details">
-                        <p><strong>Serviços:</strong> Decoração, artigos de cama, mesa e banho, e consertos.</p>
-                        <p><strong>Contato:</strong> <a href="tel:+5519983142706" class="contact-link">+55 19 98314-2706</a></p>
-                        <p><strong>Horário:</strong> Seg-Qui: 08:00–20:00 (qua a partir 09:00), Sex: 08:00–18:00, Sáb: 08:00–15:00</p>
-                        <p><strong>Website:</strong> <a href="https://www.mesadecor.com.br/" target="_blank" class="contact-link">mesadecor.com.br</a></p>
-                        <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
-                        <a href="https://wa.me/5519983142706" target="_blank" class="btn-perfil">Fale conosco (WhatsApp)</a>
+
+                    <div class="perfil-card" data-servicos="reparos" data-horario="maps">
+                        <div class="profile-header"><h3>Nilze Disk Costura</h3></div>
+                        <div class="profile-details">
+                            <p><strong>Serviços:</strong> Reparos e ajustes de roupas em geral.</p>
+                            <p><strong>Contato:</strong> <a href="tel:+5519987309789" class="contact-link">+55 19 98730-9789</a></p>
+                            <p><strong>Horário:</strong> (Verificar no Maps)</p>
+                            <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
+                            <a href="https://wa.me/5519987309789" target="_blank" class="btn-perfil">Fale conosco (WhatsApp)</a>
+                        </div>
                     </div>
-                </div>
-                <div class="perfil-card">
-                    <div class="profile-header">
-                        <h3>Costureira Claudia</h3>
+
+                    <div class="perfil-card" data-servicos="criativa reformas" data-horario="dia">
+                        <div class="profile-header"><h3>Ateliê Dacabris Costurices</h3></div>
+                        <div class="profile-details">
+                            <p><strong>Serviços:</strong> Costura criativa, reformas e ajustes.</p>
+                            <p><strong>Contato:</strong> <a href="tel:+5519981551266" class="contact-link">+55 19 98155-1266</a></p>
+                            <p><strong>Horário:</strong> Seg-Qui: 09:00–18:00, Sex: 09:00–17:00</p>
+                            <p><strong>Social:</strong> <a href="https://www.instagram.com/atelie.dacabris" target="_blank" class="contact-link">Instagram</a></p>
+                            <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
+                            <a href="https://www.instagram.com/atelie.dacabris" target="_blank" class="btn-perfil">Fale conosco (Instagram)</a>
+                        </div>
                     </div>
-                    <div class="profile-details">
-                        <p><strong>Serviços:</strong> Costura sob medida, ajustes e reformas em geral.</p>
-                        <p><strong>Contato:</strong> <a href="tel:+5519998709757" class="contact-link">+55 19 99870-9757</a></p>
-                        <p><strong>Horário:</strong> Seg-Sex: 10:00–17:00 (horários podem variar)</p>
-                        <p><strong>Social:</strong> <a href="https://www.instagram.com/claudia_costureira10" target="_blank" class="contact-link">Instagram</a></p>
-                        <p><strong>Avaliação:</strong> <span class="rating">★★★★☆</span></p>
-                        <a href="https://www.instagram.com/claudia_costureira10" target="_blank" class="btn-perfil">Fale conosco (Instagram)</a>
+
+                    <div class="perfil-card" data-servicos="decoracao reparos" data-horario="sabado noturno cedo">
+                        <div class="profile-header"><h3>Odete Costureira Mesadecor</h3></div>
+                        <div class="profile-details">
+                            <p><strong>Serviços:</strong> Decoração, artigos de cama, mesa e banho, e consertos.</p>
+                            <p><strong>Contato:</strong> <a href="tel:+5519983142706" class="contact-link">+55 19 98314-2706</a></p>
+                            <p><strong>Horário:</strong> Seg-Qui: 08:00–20:00 (qua a partir 09:00), Sex: 08:00–18:00, Sáb: 08:00–15:00</p>
+                            <p><strong>Website:</strong> <a href="https://www.mesadecor.com.br/" target="_blank" class="contact-link">mesadecor.com.br</a></p>
+                            <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
+                            <a href="https://wa.me/5519983142706" target="_blank" class="btn-perfil">Fale conosco (WhatsApp)</a>
+                        </div>
                     </div>
-                </div>
-                <div class="perfil-card">
-                    <div class="profile-header">
-                        <h3>Ateliê Espaço Da Costura</h3>
+
+                    <div class="perfil-card" data-servicos="sob-medida reformas" data-horario="dia">
+                        <div class="profile-header"><h3>Costureira Claudia</h3></div>
+                        <div class="profile-details">
+                            <p><strong>Serviços:</strong> Costura sob medida, ajustes e reformas em geral.</p>
+                            <p><strong>Contato:</strong> <a href="tel:+5519998709757" class="contact-link">+55 19 99870-9757</a></p>
+                            <p><strong>Horário:</strong> Seg-Sex: 10:00–17:00 (horários podem variar)</p>
+                            <p><strong>Social:</strong> <a href="https://www.instagram.com/claudia_costureira10" target="_blank" class="contact-link">Instagram</a></p>
+                            <p><strong>Avaliação:</strong> <span class="rating">★★★★☆</span></p>
+                            <a href="https://www.instagram.com/claudia_costureira10" target="_blank" class="btn-perfil">Fale conosco (Instagram)</a>
+                        </div>
                     </div>
-                    <div class="profile-details">
-                        <p><strong>Serviços:</strong> Costura em geral.</p>
-                        <p><strong>Contato:</strong> <a href="tel:+551933755100" class="contact-link">+55 19 3375-5100</a></p>
-                        <p><strong>Horário:</strong> Seg-Sex: 09:00–18:30</p>
-                        <p><strong>Website:</strong> <a href="https://atelie-espaco-da-costura.ueniweb.com/" target="_blank" class="contact-link">ueniweb.com</a></p>
-                        <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
-                        <a href="https://atelie-espaco-da-costura.ueniweb.com/" target="_blank" class="btn-perfil">Fale conosco (Website)</a>
+
+                    <div class="perfil-card" data-servicos="geral" data-horario="dia preco-baixo">
+                        <div class="profile-header"><h3>Ateliê Espaço Da Costura</h3></div>
+                        <div class="profile-details">
+                            <p><strong>Serviços:</strong> Costura em geral.</p>
+                            <p><strong>Contato:</strong> <a href="tel:+551933755100" class="contact-link">+55 19 3375-5100</a></p>
+                            <p><strong>Horário:</strong> Seg-Sex: 09:00–18:30</p>
+                            <p><strong>Website:</strong> <a href="https://atelie-espaco-da-costura.ueniweb.com/" target="_blank" class="contact-link">ueniweb.com</a></p>
+                            <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
+                            <a href="https://atelie-espaco-da-costura.ueniweb.com/" target="_blank" class="btn-perfil">Fale conosco (Website)</a>
+                        </div>
                     </div>
-                </div>
-                <div class="perfil-card">
-                    <div class="profile-header">
-                        <h3>Arranjos Express Piracicaba</h3>
+
+                    <div class="perfil-card" data-servicos="reparos" data-horario="sabado domingo noturno">
+                        <div class="profile-header"><h3>Arranjos Express Piracicaba</h3></div>
+                        <div class="profile-details">
+                            <p><strong>Serviços:</strong> Reparos e ajustes de roupas em geral.</p>
+                            <p><strong>Contato:</strong> <a href="tel:+551934210913" class="contact-link">+55 19 3421-0913</a></p>
+                            <p><strong>Horário:</strong> Seg-Sáb: 10:00–21:45, Dom: 14:00–19:45</p>
+                            <p><strong>Website:</strong> <a href="http://www.arranjosexpress.com.br/" target="_blank" class="contact-link">arranjosexpress.com.br</a></p>
+                            <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
+                            <a href="http://www.arranjosexpress.com.br/" target="_blank" class="btn-perfil">Fale conosco (Website)</a>
+                        </div>
                     </div>
-                    <div class="profile-details">
-                        <p><strong>Serviços:</strong> Reparos e ajustes de roupas em geral.</p>
-                        <p><strong>Contato:</strong> <a href="tel:+551934210913" class="contact-link">+55 19 3421-0913</a></p>
-                        <p><strong>Horário:</strong> Seg-Sáb: 10:00–21:45, Dom: 14:00–19:45</p>
-                        <p><strong>Website:</strong> <a href="http://www.arranjosexpress.com.br/" target="_blank" class="contact-link">arranjosexpress.com.br</a></p>
-                        <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
-                        <a href="http://www.arranjosexpress.com.br/" target="_blank" class="btn-perfil">Fale conosco (Website)</a>
-                    </div>
-                </div>
-                <div class="perfil-card">
-                    <div class="profile-header">
-                        <h3>ReCostura</h3>
-                    </div>
-                    <div class="profile-details">
-                        <p><strong>Serviços:</strong> Consertos, ajustes e reformas.</p>
-                        <p><strong>Contato:</strong> <a href="tel:+5519971556824" class="contact-link">+55 19 97155-6824</a></p>
-                        <p><strong>Horário:</strong> Seg-Sex: 08:00–18:00, Sáb: 08:00–12:00</p>
-                        <p><strong>Social:</strong> <a href="https://wa.me/5519971556824" target="_blank" class="contact-link">WhatsApp</a></p>
-                        <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
-                        <a href="https://wa.me/5519971556824" target="_blank" class="btn-perfil">Fale conosco (WhatsApp)</a>
+
+                    <div class="perfil-card" data-servicos="reparos reformas" data-horario="sabado cedo">
+                        <div class="profile-header"><h3>ReCostura</h3></div>
+                        <div class="profile-details">
+                            <p><strong>Serviços:</strong> Consertos, ajustes e reformas.</p>
+                            <p><strong>Contato:</strong> <a href="tel:+5519971556824" class="contact-link">+55 19 97155-6824</a></p>
+                            <p><strong>Horário:</strong> Seg-Sex: 08:00–18:00, Sáb: 08:00–12:00</p>
+                            <p><strong>Social:</strong> <a href="https://wa.me/5519971556824" target="_blank" class="contact-link">WhatsApp</a></p>
+                            <p><strong>Avaliação:</strong> <span class="rating">★★★★★</span></p>
+                            <a href="https://wa.me/5519971556824" target="_blank" class="btn-perfil">Fale conosco (WhatsApp)</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -181,11 +206,11 @@
             
             <input type="email" name="email" placeholder="Seu E-mail" required style="width: 100%; margin-bottom: 10px; padding: 8px; border: 1px solid #ccc;">
             
-            <input type="text" name="subject" placeholder="Assunto (opcional)" style="width: 100%; margin-bottom: 10px; padding: 8px; border: 1px solid #ccc;">
+            <input type="text" name="subject" placeholder="Assunto" style="width: 100%; margin-bottom: 10px; padding: 8px; border: 1px solid #ccc;">
             
-            <textarea name="body" placeholder="Sua Mensagem (opcional)" rows="3" style="width: 100%; margin-bottom: 10px; padding: 8px; resize: vertical; border: 1px solid #ccc;"></textarea>
+            <textarea name="body" placeholder="Sua Mensagem" rows="3" style="width: 100%; margin-bottom: 10px; padding: 8px; resize: vertical; border: 1px solid #ccc;"></textarea>
 
-            <button type="submit" style="background-color: #007BFF; color: white; padding: 10px 15px; border: none; cursor: pointer; width: 100%;">Enviar</button>
+            <button type="submit" style="background-color:  #5a5a5a; color: rgb(172, 172, 172);; padding: 10px 15px; border: none; cursor: pointer; width: 100%;">Enviar</button>
         </form>
     </div>
     
@@ -233,6 +258,6 @@
     </div>
 </footer>
 
-    <script src="../pgn-acesso/pgn acesso.js"></script>
+    <script src="../pgn-logada/pgn acesso.js"></script>
 </body>
 </html>

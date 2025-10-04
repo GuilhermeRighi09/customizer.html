@@ -34,7 +34,7 @@ function logarSistema() {
     } 
     // Redireciona para a página de acesso para qualquer outro login
     else if (email && senha) {
-        window.location.href = '../pgn-acesso/pgnacesso.html';
+        window.location.href = '../pgn-logada/pgnacesso.html';
     }
     // Caso contrário, mostra um alerta de erro
     else {

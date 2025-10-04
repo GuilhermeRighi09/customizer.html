@@ -373,7 +373,7 @@ a:hover {
 }
 
 .social-icons a:hover {
-    color: #ff9898;
+    color: #0f0f0f;
 }
 
 /* Responsivo */
@@ -504,3 +504,4 @@ a:hover {
         font-size: 14px;
     }
 }
+
