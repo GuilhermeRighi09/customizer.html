@@ -1,12 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin - Logins</title>
     <link rel="stylesheet" href="../adm-pag/adm.css">
 </head>
 <body>
-    
+
+    <div class="logo">
+        <img src="../img/customizer_logo-removebg-preview.png" alt="Logo Customizer">
+    </div>
+
+    <h1>Estes foram os Logins</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody id="tbody-usuarios"></tbody>
+    </table>
+
+    <script>
+        function carregarUsuarios() {
+            let usuarios = JSON.parse(window.localStorage.getItem('usuarios')) || [];
+            let tbody = document.getElementById('tbody-usuarios');
+            tbody.innerHTML = '';
+
+            for (let i = 0; i < usuarios.length; i++) {
+                let usuario = usuarios[i];
+
+                let linha = document.createElement('tr');
+                let colunaNome = document.createElement('td');
+                let colunaEmail = document.createElement('td');
+                let colunaAcao = document.createElement('td');
+
+                colunaNome.textContent = usuario.nome;
+                colunaEmail.textContent = usuario.email;
+
+                let botao = document.createElement('button');
+                botao.textContent = "Excluir";
+                botao.style.backgroundColor = "#ff4d4d";
+                botao.style.color = "white";
+                botao.style.border = "none";
+                botao.style.padding = "5px 10px";
+                botao.style.borderRadius = "5px";
+                botao.style.cursor = "pointer";
+
+                botao.onclick = function () {
+                    excluirUsuario(i);
+                };
+
+                colunaAcao.appendChild(botao);
+                linha.appendChild(colunaNome);
+                linha.appendChild(colunaEmail);
+                linha.appendChild(colunaAcao);
+                tbody.appendChild(linha);
+            }
+        }
+
+        function excluirUsuario(indice) {
+            let usuarios = JSON.parse(window.localStorage.getItem('usuarios')) || [];
+            usuarios.splice(indice, 1);
+            window.localStorage.setItem('usuarios', JSON.stringify(usuarios));
+            carregarUsuarios();
+        }
+
+        window.onload = carregarUsuarios;
+    </script>
+
 </body>
 </html>

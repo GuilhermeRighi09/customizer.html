@@ -43,16 +43,58 @@ function logarSistema() {
     }
 }
 
-// Added a separate function for registration
-function registrarUsuario() {
-    const email = document.getElementById('regEmail').value;
-    const senha = document.getElementById('regPassword').value;
+function carregarUsuarios() {
+    const usuariosLS = window.localStorage.getItem('usuarios');
+    const usuarios = JSON.parse(usuariosLS) || [];
 
-    if (email && senha) {
-        alert('Usuário registrado com sucesso!');
-        // Aqui você enviaria os dados para um servidor
-        login();
-    } else {
-        alert('Por favor, preencha todos os campos.');
-    }
+    const tbodyusuarios = document.getElementById('tbody-usuarios');
+    tbodyusuarios.innerHTML = ''; // Limpa antes de renderizar
+
+    usuarios.forEach(usuario => {
+        const linha = document.createElement('tr');
+        const colunaNome = document.createElement('td');
+        const colunaEmail = document.createElement('td');
+
+        colunaNome.textContent = usuario.nome;
+        colunaEmail.textContent = usuario.email;
+
+        linha.appendChild(colunaNome);
+        linha.appendChild(colunaEmail);
+        tbodyusuarios.appendChild(linha);
+    });
 }
+
+// Chamada quando a página carregar
+window.onload = carregarUsuarios;
+
+function registrarUsuario() {
+    let nome = document.querySelector('#RegForm input[type="text"]').value;
+    let email = document.getElementById('regEmail').value;
+
+    // Verifica se os campos foram preenchidos
+    if (!nome || !email) {
+        alert('Preencha nome e email.');
+        return;
+    }
+
+    // Pega os usuários já cadastrados (ou cria um array vazio)
+    let usuarios = JSON.parse(window.localStorage.getItem('usuarios')) || [];
+
+    // Adiciona o novo usuário
+    usuarios.push({ nome: nome, email: email });
+
+    // Salva de volta no localStorage
+    window.localStorage.setItem('usuarios', JSON.stringify(usuarios));
+
+    alert('Usuário registrado com sucesso!');
+
+    // Limpa os campos
+    document.querySelector('#RegForm input[type="text"]').value = '';
+    document.getElementById('regEmail').value = '';
+    document.getElementById('regPassword').value = '';
+
+    // Volta para tela de login (opcional)
+    login();
+}
+
+
