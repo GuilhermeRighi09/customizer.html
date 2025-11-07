@@ -76,8 +76,7 @@ nav ul li a:hover {
 
 .col-2 img {
     margin-left: 1290px;
-    margin-bottom: auto;
-    margin-top: auto;
+    margin-bottom: -350px;
 }
 
 .subtitulo {
@@ -104,6 +103,7 @@ nav ul li a:hover {
     color: #555;
     margin: 0;
     margin-left: 90px;
+    font-size: 20px;
 }
 
 /* ----- Botões ----- */
@@ -154,14 +154,14 @@ nav ul li a:hover {
 }
 
 .quem-somos-nos h2 {
-    font-size: 38px;
+    font-size: 40px;
     margin-bottom: 25px;
     color: #333;
     font-family: "Italiana";
 }
 
 .quem-somos-nos p {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
@@ -232,14 +232,14 @@ a:hover {
 }
 
 .secao-costureiras h2 {
-    font-size: 38px;
+    font-size: 40px;
     margin-bottom: 25px;
     color: #333;
     font-family: "Italiana";
 }
 
 .secao-costureiras p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto 50px;
@@ -283,7 +283,7 @@ a:hover {
 }
 
 .perfil-card .profile-details p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.5;
     color: #666;
     margin: 5px 0;

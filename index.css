@@ -74,7 +74,7 @@ nav ul li a:hover {
 }
 
 .subtitulo {
-    font-size: 20px;
+    font-size: 25px;
     line-height: 60px;
     margin: 40px 0;
     color: #555;
@@ -95,6 +95,7 @@ nav ul li a:hover {
     color: #555;
     margin: 40px 0;
     margin-left: 90px;
+    font-size: 20px;
 }
 
 /* ----- Botões ----- */
@@ -140,21 +141,21 @@ nav ul li a:hover {
 
 /* --- Seção "Quem somos nós" --- */
 .quem-somos-nos {
-    padding: 80px 0;
+    padding: 40px 0;
     background-color: #ffffff;
     text-align: center;
     color: #333;
 }
 
 .quem-somos-nos h2 {
-    font-size: 38px;
+    font-size: 40px;
     margin-bottom: 25px;
     color: #333;
     font-family: "Italiana";
 }
 
 .quem-somos-nos p {
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
@@ -270,7 +271,7 @@ a:hover {
 }
 
 .perfil-card .profile-details p {
-    font-size: 15px;
+    font-size: 17px;
     line-height: 1.5;
     color: #666;
     margin: 5px 0;
@@ -317,8 +318,6 @@ a:hover {
     color: white;
 }
 
-/* Font Awesome para ícones sociais */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 .footer-grid {
     display: grid;
