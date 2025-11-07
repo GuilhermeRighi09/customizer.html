@@ -13,32 +13,6 @@ function menutoggle() {
     }
 }
 
-// Event listeners para links do menu
-document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', (e) => {
-        const targetId = link.getAttribute('href');
-
-        // Se o link é para uma seção interna (começa com '#')
-        if (targetId.startsWith('#')) {
-            const email = window.localStorage.getItem('email');
-            const senha = window.localStorage.getItem('senha');
-
-            // Verifica se o usuário está logado
-            if (email === null || email === undefined || email !== 'comercecustom@gmail.com' || senha !== '1234') {
-                e.preventDefault(); // Previne o scroll para a seção
-                alert('Você precisa estar logado para navegar nesta página!');
-                window.location.href = '../pgn-login/login.html';
-            } else {
-                // Se o usuário está logado, permite o scroll suave
-                const targetSection = document.querySelector(targetId);
-                if (targetSection) {
-                    e.preventDefault();
-                    targetSection.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-        }
-    });
-});
 
 
 
