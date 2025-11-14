@@ -201,6 +201,7 @@ nav ul li a:hover {
     padding: 20px 0;
     display: block; 
 }
+
  a {
     text-decoration: none;
     color: #333;
@@ -210,6 +211,18 @@ a:hover {
     text-decoration: underline;
     color: #000000;
 }
+
+.ilustracao {
+    padding: 0; 
+    text-align: right;
+}
+
+.ilustracao img {
+    margin-left: 900px;  
+    margin-top: -550px; 
+    margin-bottom: 0; 
+}
+
 
 /* --- Nova Seção de Perfis --- */
 .secao-costureiras {
@@ -373,135 +386,6 @@ a:hover {
 
 .social-icons a:hover {
     color: #0f0f0f;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .social-icons {
-        justify-content: center;
-    }
-}
-
-/* ----- Media Queries para Responsividade ----- */
-@media only screen and (max-width: 980px) {
-    .navbar {
-        height: auto;
-        flex-direction: column;
-        padding: 10px 0;
-    }
-
-    .navbar .logo {
-        margin: 10px auto;
-    }
-
-    nav {
-        width: 100%;
-        text-align: center;
-        margin-left: 0;
-    }
-
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-        background: radial-gradient(#ffffff, #d7d0c9);
-        position: absolute;
-        top: 70px;
-        left: 0;
-        max-height: 0px;
-        overflow: hidden;
-        transition: max-height 0.5s;
-        z-index: 1000;
-        border-top: none;
-    }
-
-    nav ul li {
-        width: 100%;
-        height: 50px;
-        border-left: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        justify-content: center;
-    }
-
-    nav ul li:last-child {
-        border-bottom: none;
-    }
-
-    nav ul li a {
-        color: rgb(109, 109, 109);
-    }
-
-    .menu-icon {
-        display: block;
-        position: absolute;
-        right: 25px;
-        top: 25px;
-        filter: none;
-    }
-
-    .col-2 {
-        flex-basis: 100%;
-        text-align: center;
-    }
-
-    .col-2 h1 {
-        font-size: 30px;
-        line-height: 40px;
-        font-family: "Italiana";
-    }
-
-    .header .row {
-        margin-top: 20px;
-    }
-
-    .conta-page .row .col-2:not(:has(.form-container)) {
-        display: none;
-    }
-
-    .quem-somos-nos h2 {
-        font-size: 30px;
-        font-family: "Italiana";
-    }
-
-    .quem-somos-nos p {
-        font-size: 16px;
-        padding: 0 15px;
-    }
-
-    .localizacao-section h2 {
-        font-size: 30px;
-        font-family: "Italiana";
-    }
-
-    .map-container {
-        width: 95%;
-        padding: 15px;
-    }
-
-    #map {
-        height: 300px;
-    }
-
-    .city-input {
-        width: 100%;
-    }
-
-    .secao-costureiras h2 {
-        font-size: 30px;
-        font-family: "Italiana";
-    }
-
-    .perfil-card {
-        padding: 20px;
-    }
-
-    .perfil-card .profile-details p {
-        font-size: 14px;
-    }
 }
 
 .filtros {
