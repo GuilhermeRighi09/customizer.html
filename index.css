@@ -1,0 +1,439 @@
+/* ----- Reset básico ----- */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- Navbar ----- */
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    background-color: transparent;
+}
+
+.navbar .logo img {
+    width: 125px;
+}
+
+nav {
+    flex: 1;
+    text-align: left;
+}
+
+nav ul {
+    display: inline-block;
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(109, 109, 109);
+    font-weight: 500;
+    transition: color 0.3s;
+     
+}
+
+nav ul li a:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* ----- Menu mobile ----- */
+.menu-icon {
+    width: 28px;
+    display: none;
+    cursor: pointer;
+    filter: none;
+}
+
+/* Página Inicial*/
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.col-2 {
+    flex-basis: 50%;
+    min-width: 300px;
+}
+
+.subtitulo {
+    font-size: 25px;
+    line-height: 60px;
+    margin: 40px 0;
+    color: #555;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 90px;
+}
+
+.titulo {
+    font-size: 60px;
+    line-height: 20px;
+    margin: 70px 0;
+    color: #555;
+    font-family: "Italiana";
+    margin-left: 90px;
+}
+
+.col-2 p {
+    color: #555;
+    margin: 40px 0;
+    margin-left: 90px;
+    font-size: 20px;
+}
+
+/* ----- Botões ----- */
+.btn {
+    display: inline-block;
+    background: #616161;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 20px 0;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 300;
+    transition: background 0.5s;
+    border: none;
+    cursor: pointer;
+    margin-left: 90px;
+
+}
+
+.btn:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+.header {
+    background-color: #d7d0c9;
+}
+
+.header .row {
+    margin-top: -20px;
+}
+
+.ilustracao {
+    padding: 0; 
+    text-align: right;
+}
+
+.ilustracao img {
+    margin-left: 900px;  
+    margin-top: -550px; 
+    margin-bottom: 0; 
+}
+
+/* --- Seção "Quem somos nós" --- */
+.quem-somos-nos {
+    padding: 40px 0;
+    background-color: #ffffff;
+    text-align: center;
+    color: #333;
+}
+
+.quem-somos-nos h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    color: #333;
+    font-family: "Italiana";
+}
+
+.quem-somos-nos p {
+    font-size: 22px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/*Mapa*/
+.localizacao-secao {
+    background-color: #d7d0c9;
+    color: #333;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    padding: 20px 0; 
+    min-height: 400px; 
+    text-align: center;
+}
+
+.localizacao-secao h2 {
+    font-size: 38px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: "Italiana";
+    text-align: center;
+}
+
+.map-info {
+    max-width: 800px; 
+    margin: 0; 
+    margin-bottom: 30px; 
+    text-align: center; 
+}
+
+.maps {
+    margin: 0;
+}
+
+.maps img {
+    width: 800px; 
+    margin: 0;
+    padding: 20px 0;
+    display: block; 
+}
+
+ a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+/* --- Nova Seção de Perfis --- */
+.secao-costureiras {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+}
+
+.secao-costureiras h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: #333;
+    font-family: "Italiana";
+}
+
+.secao-costureiras p {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    color: #555;
+}
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 60px;
+    justify-items: center;
+}
+
+.perfil-card {
+    background: #d7d0c9;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.perfil-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.profile-header {
+    margin-bottom: 20px;
+}
+
+.perfil-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.perfil-card .profile-details p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #666;
+    margin: 5px 0;
+    text-align: left;
+}
+
+.perfil-card .profile-details p strong {
+    color: #333;
+}
+
+.perfil-card .profile-details .contact-link {
+    color: #ff523b;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.perfil-card .profile-details .contact-link:hover {
+    text-decoration: underline;
+}
+
+.perfil-card .rating {
+    color: gold;
+    font-size: 20px;
+}
+
+.btn-perfil {
+    display: inline-block;
+    background: #666;
+    color: #fff;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: center; 
+    box-sizing: border-box; 
+}
+
+.btn-perfil:hover {
+    background: #333;
+    color: white;
+}
+
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    background-color: #d7d0c9;
+    color: rgb(109, 109, 109);
+    font-family: 'Poppins', sans-serif;
+
+    padding: 10px 10px;
+    gap: 30px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    position: relative;
+    color: rgb(109, 109, 109);
+}
+
+.footer-col p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgb(109, 109, 109);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    color: rgb(109, 109, 109);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+    color: #000000;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: rgb(109, 109, 109);
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #0f0f0f;
+}
+
+.filtros {
+  margin: 30px auto;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  background: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 800px;
+  transition: all 0.3s ease;
+}
+
+.filtros:hover {
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.filtros label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.filtros select {
+  margin-top: 6px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+  background-color: #fff;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.filtros select:hover {
+  border-color: #007bff;
+}
+
+#btn-aplicar-filtros {
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #5a5a5a, #808080);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+#btn-aplicar-filtros:hover {
+  background: linear-gradient(135deg, rgb(22, 22, 22), #535353);
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
